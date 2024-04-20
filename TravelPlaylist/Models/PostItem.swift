@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct PostItem: Codable, Identifiable {
+    let id: String
+    let owner: User
+    let content: String
+    let createDate: TimeInterval
+//    let location: Location
+//    let track: Track
+}

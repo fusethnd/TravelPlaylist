@@ -7,12 +7,44 @@
 
 import SwiftUI
 
-struct LoginViewModel: View {
+struct LoginView: View {
+    @StateObject var viewModel = LoginViewModel()
+    @StateObject var spotifyModel = SpotifyAuthViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                HeaderView(title: "TravelPlaylist", subtitle: "Make your playlist on the way", angle: 15, background: .pink)
+                
+                Form {
+                    TextField("Email Address", text: $viewModel.email)
+                        .textFieldStyle(DefaultTextFieldStyle())
+                        .autocorrectionDisabled()
+                        .autocapitalization(.none)
+                    SecureField("Password", text: $viewModel.password)
+                        .textFieldStyle(DefaultTextFieldStyle())
+                    
+                    TLButton(title: "Log In", background: .blue) {
+                        viewModel.login()
+                    }
+                    
+                    TLButton(title: "Log In via Spotify", background: .green) {
+                         spotifyModel.authenticate()
+                        // When the user taps the button, the app should open a web view or Safari to show the Spotify authorization page.
+                    }
+                }
+                VStack {
+                    Text("Don't have an Account?")
+                    NavigationLink("Create an Account", destination: RegisterView())
+                }
+                
+            }
+        }
     }
 }
 
-#Preview {
-    LoginViewModel()
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView()
+    }
 }

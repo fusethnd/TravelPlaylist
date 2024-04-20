@@ -7,18 +7,47 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
+    @StateObject var viewModel = MainViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
+            accountView
+        } else {
+            LoginView()
         }
-        .padding()
+        
+//        if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
+//            accountView
+//        } else {
+//            LoginView()
+//        }
     }
+    
+    var accountView: some View {
+        TabView { // Navigation
+//            PostView(userId: viewModel.currentUserId)
+//                .tabItem {
+//                    Label("Home", systemImage: "house")
+//                }
+//            
+//            JourneyView(userId: viewModel.currentUserId)
+//                .tabItem {
+//                    Label("Home", systemImage: "house")
+//                }
+            
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle")
+                }
+            
+        }
+    }
+    
 }
 
-#Preview {
-    ContentView()
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
+    }
 }
