@@ -11,10 +11,9 @@
 			<string>travelplaylist</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>https://open.spotify.com</string>
+				<string>spotify-ios-quick-start</string>
 			</array>
 		</dict>
-		<dict/>
 	</array>
 </dict>
 </plist>

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct LoginView: View {
     @StateObject var viewModel = LoginViewModel()
-    @StateObject var spotifyModel = SpotifyAuthViewModel()
     
     var body: some View {
         NavigationView {
@@ -29,10 +28,19 @@ struct LoginView: View {
                     }
                     
                     TLButton(title: "Log In via Spotify", background: .green) {
-                         spotifyModel.authenticate()
+                        // be back to add this function later
+//                         spotifyModel.authenticate()
+//                        viewModel.spotifyLogin()
+//                        viewModel.completionHandler = { [weak self] success in
+//                            DispatchQueue.main.async {
+//                                self?.handleSignIn(success: success)
+//                            }
+//                        }
+                        
                         // When the user taps the button, the app should open a web view or Safari to show the Spotify authorization page.
                     }
                 }
+                
                 VStack {
                     Text("Don't have an Account?")
                     NavigationLink("Create an Account", destination: RegisterView())

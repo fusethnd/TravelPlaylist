@@ -9,8 +9,8 @@ import SwiftUI
 import MapKit
 import CoreLocation
 
-struct MapView: View {
-    @StateObject private var viewModel = MapViewModel()
+struct MapsView: View {
+    @StateObject private var viewModel = MapsViewModel()
     
     var body: some View {
         Map(coordinateRegion: $viewModel.region, interactionModes: .all, showsUserLocation: true, userTrackingMode: .none, annotationItems: viewModel.annotations) { annotation in
@@ -23,6 +23,7 @@ struct MapView: View {
         }
     }
     
+    // Add current location
     private func addExistingPoints() {
         // Check if location services are enabled
         guard CLLocationManager.locationServicesEnabled() else {
@@ -43,8 +44,8 @@ struct MapView: View {
     }
 }
 
-struct MapView_Previews: PreviewProvider {
+struct MapsView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapsView()
     }
 }

@@ -16,22 +16,17 @@ struct MainView: View {
         } else {
             LoginView()
         }
-        
-//        if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
-//            accountView
-//        } else {
-//            LoginView()
-//        }
     }
     
     var accountView: some View {
         TabView { // Navigation
+            // Feed page
 //            PostView(userId: viewModel.currentUserId)
 //                .tabItem {
 //                    Label("Home", systemImage: "house")
 //                }
-//            
-//            JourneyView(userId: viewModel.currentUserId)
+            
+//            JoerneyView(userId: viewModel.currentUserId)
 //                .tabItem {
 //                    Label("Home", systemImage: "house")
 //                }

@@ -8,7 +8,9 @@
 import Foundation
 import MapKit
 
-class MapViewModel: ObservableObject {
+class MapsViewModel: ObservableObject {
+    // Fix Location
+    // Change Default to current Location
     @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
     
     @Published var annotations: [AnnotationItem] = []

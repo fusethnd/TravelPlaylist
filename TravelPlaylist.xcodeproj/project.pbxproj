@@ -7,6 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A925A65D2BD470DF0057434E /* SpotifyiOS in Frameworks */ = {isa = PBXBuildFile; productRef = A925A65C2BD470DF0057434E /* SpotifyiOS */; };
+		A947BCFE2BD8F933000D162C /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BCFD2BD8F932000D162C /* MapsView.swift */; };
+		A947BCFF2BD8F933000D162C /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BCFD2BD8F932000D162C /* MapsView.swift */; };
+		A947BD002BD8F933000D162C /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BCFD2BD8F932000D162C /* MapsView.swift */; };
+		A947BD022BD8F93F000D162C /* MapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD012BD8F93F000D162C /* MapsViewModel.swift */; };
+		A947BD0F2BD924A2000D162C /* JoerneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD0E2BD924A2000D162C /* JoerneyView.swift */; };
+		A947BD102BD924A2000D162C /* JoerneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD0E2BD924A2000D162C /* JoerneyView.swift */; };
+		A947BD112BD924A2000D162C /* JoerneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD0E2BD924A2000D162C /* JoerneyView.swift */; };
+		A947BD132BD924B2000D162C /* JoerneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD122BD924B2000D162C /* JoerneyViewModel.swift */; };
+		A947BD142BD924B2000D162C /* JoerneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD122BD924B2000D162C /* JoerneyViewModel.swift */; };
+		A947BD152BD924B2000D162C /* JoerneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD122BD924B2000D162C /* JoerneyViewModel.swift */; };
+		A947BD172BD93300000D162C /* CreatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD162BD93300000D162C /* CreatePostViewModel.swift */; };
+		A947BD182BD93300000D162C /* CreatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD162BD93300000D162C /* CreatePostViewModel.swift */; };
+		A947BD192BD93300000D162C /* CreatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD162BD93300000D162C /* CreatePostViewModel.swift */; };
+		A947BD1B2BD93318000D162C /* PostItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD1A2BD93318000D162C /* PostItemViewModel.swift */; };
+		A947BD1C2BD93318000D162C /* PostItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD1A2BD93318000D162C /* PostItemViewModel.swift */; };
+		A947BD1D2BD93318000D162C /* PostItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD1A2BD93318000D162C /* PostItemViewModel.swift */; };
+		A947BD1F2BD93340000D162C /* PostContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD1E2BD93340000D162C /* PostContentViewModel.swift */; };
+		A947BD202BD93341000D162C /* PostContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD1E2BD93340000D162C /* PostContentViewModel.swift */; };
+		A947BD212BD93341000D162C /* PostContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD1E2BD93340000D162C /* PostContentViewModel.swift */; };
+		A947BD232BD9335B000D162C /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD222BD9335B000D162C /* CreatePostView.swift */; };
+		A947BD242BD9335B000D162C /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD222BD9335B000D162C /* CreatePostView.swift */; };
+		A947BD252BD9335B000D162C /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD222BD9335B000D162C /* CreatePostView.swift */; };
+		A947BD272BD9336E000D162C /* PostItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD262BD9336E000D162C /* PostItemView.swift */; };
+		A947BD282BD9336E000D162C /* PostItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD262BD9336E000D162C /* PostItemView.swift */; };
+		A947BD292BD9336E000D162C /* PostItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD262BD9336E000D162C /* PostItemView.swift */; };
+		A947BD2B2BD9337C000D162C /* PostContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD2A2BD9337C000D162C /* PostContentView.swift */; };
+		A947BD2C2BD9337C000D162C /* PostContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD2A2BD9337C000D162C /* PostContentView.swift */; };
+		A947BD2D2BD9337C000D162C /* PostContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BD2A2BD9337C000D162C /* PostContentView.swift */; };
 		A97117AE2BBFC65E0095C256 /* TravelPlaylistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97117AD2BBFC65E0095C256 /* TravelPlaylistApp.swift */; };
 		A97117B02BBFC65E0095C256 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97117AF2BBFC65E0095C256 /* MainView.swift */; };
 		A97117B22BBFC6600095C256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97117B12BBFC6600095C256 /* Assets.xcassets */; };
@@ -54,13 +83,6 @@
 		A971182A2BC68DDB0095C256 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A97118292BC68DDB0095C256 /* FirebaseStorageCombine-Community */; };
 		A971182C2BC68E640095C256 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971182B2BC68E640095C256 /* HeaderView.swift */; };
 		A971182E2BC68EAA0095C256 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971182D2BC68EAA0095C256 /* TLButton.swift */; };
-		A97118312BC6AEDF0095C256 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97118302BC6AEDF0095C256 /* TokenResponse.swift */; };
-		A97118352BC871E10095C256 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97118342BC871E10095C256 /* AuthManager.swift */; };
-		A97118372BC871F60095C256 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97118362BC871F60095C256 /* APICaller.swift */; };
-		A97118392BC8720D0095C256 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97118382BC8720D0095C256 /* HapticsManager.swift */; };
-		A971183C2BC889A60095C256 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971183B2BC889A60095C256 /* AuthViewController.swift */; };
-		A971187A2BC9DC070095C256 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97118792BC9DC070095C256 /* AuthResponse.swift */; };
-		A97118842BCB320B0095C256 /* SpotifyAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97118832BCB320B0095C256 /* SpotifyAuthViewModel.swift */; };
 		A97118872BCB34090095C256 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A97118862BCB34090095C256 /* OAuthSwift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +104,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A947BCFD2BD8F932000D162C /* MapsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
+		A947BD012BD8F93F000D162C /* MapsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsViewModel.swift; path = TravelPlaylist/ViewModels/MapsViewModel.swift; sourceTree = SOURCE_ROOT; };
+		A947BD0E2BD924A2000D162C /* JoerneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoerneyView.swift; sourceTree = "<group>"; };
+		A947BD122BD924B2000D162C /* JoerneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoerneyViewModel.swift; sourceTree = "<group>"; };
+		A947BD162BD93300000D162C /* CreatePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewModel.swift; sourceTree = "<group>"; };
+		A947BD1A2BD93318000D162C /* PostItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItemViewModel.swift; sourceTree = "<group>"; };
+		A947BD1E2BD93340000D162C /* PostContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContentViewModel.swift; sourceTree = "<group>"; };
+		A947BD222BD9335B000D162C /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
+		A947BD262BD9336E000D162C /* PostItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostItemView.swift; sourceTree = "<group>"; };
+		A947BD2A2BD9337C000D162C /* PostContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContentView.swift; sourceTree = "<group>"; };
 		A97117AA2BBFC65E0095C256 /* TravelPlaylist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPlaylist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97117AD2BBFC65E0095C256 /* TravelPlaylistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPlaylistApp.swift; sourceTree = "<group>"; };
 		A97117AF2BBFC65E0095C256 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -106,13 +138,6 @@
 		A971182B2BC68E640095C256 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		A971182D2BC68EAA0095C256 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
 		A971182F2BC6A6BC0095C256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		A97118302BC6AEDF0095C256 /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
-		A97118342BC871E10095C256 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
-		A97118362BC871F60095C256 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
-		A97118382BC8720D0095C256 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
-		A971183B2BC889A60095C256 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		A97118792BC9DC070095C256 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
-		A97118832BCB320B0095C256 /* SpotifyAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +149,7 @@
 				A97118162BC68DDB0095C256 /* FirebaseFunctionsCombine-Community in Frameworks */,
 				A971180E2BC68DDB0095C256 /* FirebaseFirestore in Frameworks */,
 				A97117FA2BC68DDB0095C256 /* FirebaseAnalyticsSwift in Frameworks */,
+				A925A65D2BD470DF0057434E /* SpotifyiOS in Frameworks */,
 				A97118872BCB34090095C256 /* OAuthSwift in Frameworks */,
 				A97117F62BC68DDB0095C256 /* FirebaseAnalytics in Frameworks */,
 				A97117F82BC68DDB0095C256 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
@@ -192,8 +218,6 @@
 		A97117AC2BBFC65E0095C256 /* TravelPlaylist */ = {
 			isa = PBXGroup;
 			children = (
-				A971183A2BC8898D0095C256 /* Controllers */,
-				A97118332BC8716A0095C256 /* Managers */,
 				A971182F2BC6A6BC0095C256 /* Info.plist */,
 				A97117D92BC680220095C256 /* Others */,
 				A97117DE2BC6838C0095C256 /* Models */,
@@ -243,12 +267,17 @@
 		A97117DC2BC683680095C256 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A97117AF2BBFC65E0095C256 /* MainView.swift */,
 				A97117EE2BC68A230095C256 /* LoginView.swift */,
-				A971182D2BC68EAA0095C256 /* TLButton.swift */,
 				A97117F02BC68A4C0095C256 /* RegisterView.swift */,
-				A971182B2BC68E640095C256 /* HeaderView.swift */,
 				A97117F22BC68A7C0095C256 /* ProfileView.swift */,
+				A97117AF2BBFC65E0095C256 /* MainView.swift */,
+				A947BD0E2BD924A2000D162C /* JoerneyView.swift */,
+				A947BD222BD9335B000D162C /* CreatePostView.swift */,
+				A947BD262BD9336E000D162C /* PostItemView.swift */,
+				A947BD2A2BD9337C000D162C /* PostContentView.swift */,
+				A947BCFD2BD8F932000D162C /* MapsView.swift */,
+				A971182D2BC68EAA0095C256 /* TLButton.swift */,
+				A971182B2BC68E640095C256 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,10 +286,14 @@
 			isa = PBXGroup;
 			children = (
 				A97117E62BC689870095C256 /* LoginViewModel.swift */,
-				A97118832BCB320B0095C256 /* SpotifyAuthViewModel.swift */,
 				A97117E82BC689930095C256 /* RegisterViewModel.swift */,
 				A97117EA2BC689A20095C256 /* ProfileViewModel.swift */,
 				A97117EC2BC689C50095C256 /* MainViewModel.swift */,
+				A947BD122BD924B2000D162C /* JoerneyViewModel.swift */,
+				A947BD162BD93300000D162C /* CreatePostViewModel.swift */,
+				A947BD1A2BD93318000D162C /* PostItemViewModel.swift */,
+				A947BD1E2BD93340000D162C /* PostContentViewModel.swift */,
+				A947BD012BD8F93F000D162C /* MapsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -270,8 +303,6 @@
 			children = (
 				A97117E22BC688DD0095C256 /* User.swift */,
 				A97117E42BC688EA0095C256 /* PostItem.swift */,
-				A97118302BC6AEDF0095C256 /* TokenResponse.swift */,
-				A97118792BC9DC070095C256 /* AuthResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -281,24 +312,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A97118332BC8716A0095C256 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				A97118342BC871E10095C256 /* AuthManager.swift */,
-				A97118362BC871F60095C256 /* APICaller.swift */,
-				A97118382BC8720D0095C256 /* HapticsManager.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		A971183A2BC8898D0095C256 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				A971183B2BC889A60095C256 /* AuthViewController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +359,7 @@
 				A97118272BC68DDB0095C256 /* FirebaseStorage */,
 				A97118292BC68DDB0095C256 /* FirebaseStorageCombine-Community */,
 				A97118862BCB34090095C256 /* OAuthSwift */,
+				A925A65C2BD470DF0057434E /* SpotifyiOS */,
 			);
 			productName = TravelPlaylist;
 			productReference = A97117AA2BBFC65E0095C256 /* TravelPlaylist.app */;
@@ -467,27 +481,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A97118392BC8720D0095C256 /* HapticsManager.swift in Sources */,
+				A947BD0F2BD924A2000D162C /* JoerneyView.swift in Sources */,
+				A947BD1B2BD93318000D162C /* PostItemViewModel.swift in Sources */,
+				A947BD132BD924B2000D162C /* JoerneyViewModel.swift in Sources */,
 				A97117F12BC68A4C0095C256 /* RegisterView.swift in Sources */,
 				A971182E2BC68EAA0095C256 /* TLButton.swift in Sources */,
 				A97117E32BC688DD0095C256 /* User.swift in Sources */,
 				A97117B02BBFC65E0095C256 /* MainView.swift in Sources */,
-				A97118312BC6AEDF0095C256 /* TokenResponse.swift in Sources */,
 				A97117E92BC689930095C256 /* RegisterViewModel.swift in Sources */,
+				A947BCFE2BD8F933000D162C /* MapsView.swift in Sources */,
 				A97117F32BC68A7C0095C256 /* ProfileView.swift in Sources */,
+				A947BD232BD9335B000D162C /* CreatePostView.swift in Sources */,
 				A97117E72BC689870095C256 /* LoginViewModel.swift in Sources */,
+				A947BD2B2BD9337C000D162C /* PostContentView.swift in Sources */,
 				A97117E52BC688EA0095C256 /* PostItem.swift in Sources */,
-				A97118352BC871E10095C256 /* AuthManager.swift in Sources */,
-				A97118842BCB320B0095C256 /* SpotifyAuthViewModel.swift in Sources */,
+				A947BD022BD8F93F000D162C /* MapsViewModel.swift in Sources */,
 				A97117E12BC688020095C256 /* Extensions.swift in Sources */,
 				A97117EB2BC689A20095C256 /* ProfileViewModel.swift in Sources */,
+				A947BD1F2BD93340000D162C /* PostContentViewModel.swift in Sources */,
 				A97117AE2BBFC65E0095C256 /* TravelPlaylistApp.swift in Sources */,
+				A947BD272BD9336E000D162C /* PostItemView.swift in Sources */,
 				A97117EF2BC68A230095C256 /* LoginView.swift in Sources */,
-				A97118372BC871F60095C256 /* APICaller.swift in Sources */,
-				A971183C2BC889A60095C256 /* AuthViewController.swift in Sources */,
 				A97117ED2BC689C50095C256 /* MainViewModel.swift in Sources */,
-				A971187A2BC9DC070095C256 /* AuthResponse.swift in Sources */,
 				A971182C2BC68E640095C256 /* HeaderView.swift in Sources */,
+				A947BD172BD93300000D162C /* CreatePostViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +513,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A97117BF2BBFC6600095C256 /* TravelPlaylistTests.swift in Sources */,
+				A947BD202BD93341000D162C /* PostContentViewModel.swift in Sources */,
+				A947BD2C2BD9337C000D162C /* PostContentView.swift in Sources */,
+				A947BD1C2BD93318000D162C /* PostItemViewModel.swift in Sources */,
+				A947BD142BD924B2000D162C /* JoerneyViewModel.swift in Sources */,
+				A947BD242BD9335B000D162C /* CreatePostView.swift in Sources */,
+				A947BD182BD93300000D162C /* CreatePostViewModel.swift in Sources */,
+				A947BD102BD924A2000D162C /* JoerneyView.swift in Sources */,
+				A947BD282BD9336E000D162C /* PostItemView.swift in Sources */,
+				A947BCFF2BD8F933000D162C /* MapsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,8 +529,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A947BD1D2BD93318000D162C /* PostItemViewModel.swift in Sources */,
+				A947BD292BD9336E000D162C /* PostItemView.swift in Sources */,
+				A947BD2D2BD9337C000D162C /* PostContentView.swift in Sources */,
 				A97117CB2BBFC6610095C256 /* TravelPlaylistUITestsLaunchTests.swift in Sources */,
+				A947BD152BD924B2000D162C /* JoerneyViewModel.swift in Sources */,
+				A947BD192BD93300000D162C /* CreatePostViewModel.swift in Sources */,
+				A947BD212BD93341000D162C /* PostContentViewModel.swift in Sources */,
+				A947BD252BD9335B000D162C /* CreatePostView.swift in Sources */,
+				A947BD002BD8F933000D162C /* MapsView.swift in Sources */,
 				A97117C92BBFC6610095C256 /* TravelPlaylistUITests.swift in Sources */,
+				A947BD112BD924A2000D162C /* JoerneyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,6 +883,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A925A65C2BD470DF0057434E /* SpotifyiOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A97118322BC868060095C256 /* XCRemoteSwiftPackageReference "ios-sdk" */;
+			productName = SpotifyiOS;
+		};
 		A97117F52BC68DDB0095C256 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A97117DF2BC6872D0095C256 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
