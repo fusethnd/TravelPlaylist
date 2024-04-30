@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 import FirebaseCore
 
 @main
@@ -16,6 +17,7 @@ struct TravelPlaylistApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
+//            MapsView()
         }
     }
 }
