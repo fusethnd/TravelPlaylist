@@ -10,11 +10,28 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class CreatePostViewModel: ObservableObject {
-    @Published var owner = "" // User.name
+    @Published var author = "" // User.name
     @Published var content = ""
     @Published var location = ""
     @Published var track = ""
     @Published var showAlert = false
+    
+    func createPost(content: String) {
+        // Firebase function to add tweet
+        let db = Firestore.firestore()
+        let tweetData: [String: Any] = [
+            "author": "Anonymous",  // Example: Fixed author, replace with actual user data if available
+            "content": content,
+            "createDate": Timestamp(date: Date())
+        ]
+        db.collection("tweets").addDocument(data: tweetData) { error in
+                if let error = error {
+                    print("Error adding document: \(error)")
+                } else {
+                    self.presentationMode.wrappedValue.dismiss()
+                }
+            }
+        }
     
     func post() {
         guard canPost else { return }
@@ -25,7 +42,7 @@ class CreatePostViewModel: ObservableObject {
         let newId = UUID().uuidString
         let newItem = PostItem(
             id: newId,
-//            owner: owner, // ????? (Display Name of user)
+            author: author,
             content: content,
             createDate: Date().timeIntervalSince1970 //,
 //            location: location,

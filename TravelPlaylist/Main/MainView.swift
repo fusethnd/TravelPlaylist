@@ -21,15 +21,15 @@ struct MainView: View {
     var accountView: some View {
         TabView { // Navigation
             // Feed page
-//            PostView(userId: viewModel.currentUserId)
-//                .tabItem {
-//                    Label("Home", systemImage: "house")
-//                }
+            FeedView()
+                .tabItem {
+                    Label("Home", systemImage: "note.text")
+                }
             
-//            JoerneyView(userId: viewModel.currentUserId)
-//                .tabItem {
-//                    Label("Home", systemImage: "house")
-//                }
+            JoerneyView(userId: viewModel.currentUserId)
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
             
             ProfileView()
                 .tabItem {

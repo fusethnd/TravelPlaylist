@@ -54,6 +54,7 @@ struct PostContentView_Previews: PreviewProvider {
             userId: "A7fMXIMP7pctLhRFNH5Ue17uzYB2",
             item: PostItem(
                 id: "123",
+                author: "John Doe",
                 content: "temp",
                 createDate: Date().timeIntervalSince1970
             )

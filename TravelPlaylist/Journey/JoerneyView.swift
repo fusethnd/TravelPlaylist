@@ -15,7 +15,7 @@ struct JoerneyView: View {
     @FirestoreQuery var items: [PostItem]
     
     init(userId: String) {
-        self._items = FirestoreQuery(collectionPath: "users/\(userId)/todos")
+        self._items = FirestoreQuery(collectionPath: "users/\(userId)/posts")
         self._joerneyViewModel = StateObject(wrappedValue: JoerneyViewModel(userId: userId))
     }
     
@@ -35,7 +35,7 @@ struct JoerneyView: View {
                 }
                 .listStyle(PlainListStyle())
             }
-            .navigationTitle("Notes")
+            .navigationTitle("My Journey")
             .toolbar {
                 Button {
                     joerneyViewModel.showingPostItemView = true
@@ -47,6 +47,7 @@ struct JoerneyView: View {
 //                PostItemView(postItemPresented: $viewModel.showingPostItemView)
             }
         }
+        .navigationBarTitle("Journey")
     }
 }
 

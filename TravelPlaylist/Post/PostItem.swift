@@ -9,9 +9,9 @@ import Foundation
 
 struct PostItem: Codable, Identifiable {
     let id: String
-//    let owner: String
+    let author: String
     let content: String
     let createDate: TimeInterval
-//    let location: String // String of location (latitude,longtitide)
-//    let track: String // String of UId
+//    let location: locationItem // String of location (latitude,longtitide)
+//    let track: TrackItem
 }

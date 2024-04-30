@@ -14,6 +14,12 @@ struct PostItemView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
+                Text(item.author)
+                    .font(.headline)
+                
+                Text(item.content)
+                    .font(.body)
+                
                 Text("Song") // item.track
                     .font(.title)
                     .bold()
@@ -37,6 +43,7 @@ struct PostItemView_Previews: PreviewProvider {
     static var previews: some View {
         PostItemView(item: PostItem(
             id: "123",
+            author: "John Doe",
             content: "Get Milk in today.",
             createDate: Date().timeIntervalSince1970)
         )
