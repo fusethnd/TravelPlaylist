@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CreatePostView: View {
-    @StateObject var viewModel = CreatePostViewModel()
+    @ObservedObject var viewModel = CreatePostViewModel()
     @Binding var newItemPresented: Bool
     
     var body: some View {
@@ -19,24 +19,14 @@ struct CreatePostView: View {
                 .padding(.top, 50)
             
             Form {
-//                TextField("Title", text: $viewModel.title)
-//                    .textFieldStyle(DefaultTextFieldStyle())
-                               
                 ScrollView {
-                    TextEditor(text: $viewModel.content)
-                        .frame(minHeight: 300, maxHeight: .infinity) // Adjust minimum height as needed
-                        .padding()
-                    
-                    // Display Location Selected
-                    
-                    // Display Song Selected
-                    
+                    TextField("What’s happening?", text: $viewModel.content)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
+                .padding()
                 .border(Color.gray, width: 1)
                 
-                // Add MapsView
-
-                TLButton(title: "Post", background: .pink) {
+                Button("Post") {
                     if viewModel.canPost {
                         viewModel.post()
                         newItemPresented = false
@@ -44,6 +34,7 @@ struct CreatePostView: View {
                         viewModel.showAlert = true
                     }
                 }
+                .padding()
             }
             .alert(isPresented: $viewModel.showAlert) {
                 Alert(
@@ -55,8 +46,8 @@ struct CreatePostView: View {
     }
 }
 
-struct CreatePostView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreatePostView(newItemPresented: .constant(true))
-    }
-}
+//struct CreatePostView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CreatePostView(newItemPresented: .constant(true))
+//    }
+//}

@@ -11,11 +11,11 @@ import FirebaseAuth
 
 class FeedViewModel: ObservableObject {
     @Published var showingCreatePostView = false
-    @Published var showingPostItemView = false
-    
-    @Published var title = ""
-    @Published var content = ""
-    @Published var showAlert = false
+//    @Published var showingPostItemView = false
+//    
+//    @Published var title = ""
+//    @Published var content = ""
+//    @Published var showAlert = false
     @Published var feed = [PostItem]()
     
     // private let userId: String
@@ -26,9 +26,11 @@ class FeedViewModel: ObservableObject {
         fetchPostItem()
     }
 
-    private func fetchPostItem() {
+    func fetchPostItem() {
         let db = Firestore.firestore()
-        db.collection("feeds").getDocuments { snapshot, error in
+        db.collection("feeds")
+            .order(by: "createDate", descending: true)
+            .getDocuments { snapshot, error in
             if let snapshot = snapshot {
                 self.feed = snapshot.documents.map { doc in
                     let timestamp = (doc["createDate"] as? Timestamp) ?? Timestamp()

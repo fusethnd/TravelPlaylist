@@ -23,12 +23,12 @@ struct MainView: View {
             // Feed page
             FeedView()
                 .tabItem {
-                    Label("Home", systemImage: "note.text")
+                    Label("Feed", systemImage: "note.text")
                 }
             
             JoerneyView(userId: viewModel.currentUserId)
                 .tabItem {
-                    Label("Home", systemImage: "house")
+                    Label("My Journey", systemImage: "house")
                 }
             
             ProfileView()

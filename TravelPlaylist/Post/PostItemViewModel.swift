@@ -22,7 +22,7 @@ class PostItemViewModel: ObservableObject {
         let db = Firestore.firestore()
         db.collection("users")
             .document(uid)
-            .collection("todos")
+            .collection("posts")
             .document(itemCopy.id)
             .setData(itemCopy.asDictionary())
     }

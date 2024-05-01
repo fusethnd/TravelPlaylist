@@ -39,13 +39,14 @@ struct PostItemView: View {
     }
 }
 
-struct PostItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostItemView(item: PostItem(
-            id: "123",
-            author: "John Doe",
-            content: "Get Milk in today.",
-            createDate: Date().timeIntervalSince1970)
-        )
-    }
-}
+//struct PostItemView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PostItemView(item: PostItem(
+//            id: "123",
+//            author: "John Doe",
+//            content: "Get Milk in today.",
+//            createDate: Date().timeIntervalSince1970)
+//            
+//        )
+//    }
+//}
