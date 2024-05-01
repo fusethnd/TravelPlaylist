@@ -14,8 +14,12 @@ struct PostItemView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(item.author)
-                    .font(.headline)
+                HStack {
+                    Text(item.authorName)
+                        .font(.headline)
+                    Text(item.author)
+                        .font(.headline)
+                }
                 
                 Text(item.content)
                     .font(.body)
@@ -39,14 +43,14 @@ struct PostItemView: View {
     }
 }
 
-//struct PostItemView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PostItemView(item: PostItem(
-//            id: "123",
-//            author: "John Doe",
-//            content: "Get Milk in today.",
-//            createDate: Date().timeIntervalSince1970)
-//            
-//        )
-//    }
-//}
+struct PostItemView_Previews: PreviewProvider {
+    static var previews: some View {
+        PostItemView(item: PostItem(
+            id: "123",
+            authorName: "John Doe",
+            author: "@johndoe",
+            content: "Get Milk in today.",
+            createDate: Date().timeIntervalSince1970)
+        )
+    }
+}

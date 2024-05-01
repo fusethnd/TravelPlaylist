@@ -9,6 +9,7 @@ import Foundation
 
 struct PostItem: Codable, Identifiable {
     let id: String
+    let authorName: String
     let author: String
     let content: String
     let createDate: TimeInterval

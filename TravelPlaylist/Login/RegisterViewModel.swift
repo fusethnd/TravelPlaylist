@@ -11,6 +11,7 @@ import FirebaseFirestore
 
 class RegisterViewModel: ObservableObject {
     @Published var name = ""
+    @Published var username = ""
     @Published var email = ""
     @Published var password = ""
     
@@ -27,7 +28,7 @@ class RegisterViewModel: ObservableObject {
     }
     
     private func insertUserRecord(id: String) {
-        let newUser = User(id: id, name: name, email: email, joined: Date().timeIntervalSince1970)
+        let newUser = User(id: id, name: name, username: username, email: email, joined: Date().timeIntervalSince1970)
         let db = Firestore.firestore()
         db.collection("users")
             .document(id)
@@ -36,6 +37,7 @@ class RegisterViewModel: ObservableObject {
     
     private func validate() -> Bool {
         guard !name.trimmingCharacters(in: .whitespaces).isEmpty,
+              !username.trimmingCharacters(in: .whitespaces).isEmpty,
               !email.trimmingCharacters(in: .whitespaces).isEmpty,
               !password.trimmingCharacters(in: .whitespaces).isEmpty else {
             return false

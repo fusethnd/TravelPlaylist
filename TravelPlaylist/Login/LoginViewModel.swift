@@ -7,8 +7,6 @@
 
 import Foundation
 import FirebaseAuth
-import UIKit
-
 
 class LoginViewModel: ObservableObject {
     @Published var email = ""
@@ -17,7 +15,4 @@ class LoginViewModel: ObservableObject {
     func login() {
         Auth.auth().signIn(withEmail: email, password: password)
     }
-    
-    
 }
-

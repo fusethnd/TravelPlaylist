@@ -21,6 +21,10 @@ struct ProfileView: View {
                     
                     VStack(alignment: .leading) {
                         HStack {
+                            Text("Username: ")
+                            Text("@\(user.username)")
+                        }
+                        HStack {
                             Text("Name: ")
                             Text(user.name)
                         }

@@ -32,7 +32,7 @@ struct FeedView: View {
                 CreatePostView(newItemPresented: $viewModel.showingCreatePostView) // Ensure CreateTweetView can handle its own environment and view model
             }
             .onAppear {
-//                viewModel.fetchPostItem()
+                viewModel.fetchPostItem()
             }
 //            .toolbar {
 //                Button {

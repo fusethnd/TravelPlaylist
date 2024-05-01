@@ -19,15 +19,7 @@ struct JoerneyView: View {
         NavigationView {
             VStack {
                 List(joerneyViewModel.posts) { post in
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Author: \(post.author)")
-                            .font(.headline)
-                        Text("Content: \(post.content)")
-                            .font(.body)
-                            .foregroundColor(.secondary)
-                        
-                    }
-                    .padding(.vertical, 8)
+                    PostItemView(item: post)
                 }
                 .navigationTitle("My Journey")
             }
