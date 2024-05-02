@@ -7,24 +7,39 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ResultView: View {
     @StateObject var viewModel = ResultViewModel()
     @State private var keyword = ""
     @State private var selectedType = "track"  // Assuming you're searching for tracks
+    // @Binding var newItemPresented: Bool
+    @Environment(\.presentationMode) var presentationMode
    
     var body: some View {
         VStack {
-            HStack {
-                TextField("Find your music", text: $keyword)
-                    .frame(width: 260)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-
-                Button("Search") {
-                    viewModel.fetchData(keyword: keyword, type: selectedType)
-                }
-                .padding()
+            Button("Go Back") {
+                presentationMode.wrappedValue.dismiss()
             }
+            
+            TextField("Find your music", text: $keyword)
+                .frame(width: 260)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+
+            Button("Search") {
+                viewModel.fetchData(keyword: keyword, type: selectedType)
+            }
+            .padding()
+//            HStack {
+//                TextField("Find your music", text: $keyword)
+//                    .frame(width: 260)
+//                    .textFieldStyle(RoundedBorderTextFieldStyle())
+//                    .padding()
+//
+//                Button("Search") {
+//                    viewModel.fetchData(keyword: keyword, type: selectedType)
+//                }
+//                .padding()
+//            }
             
             if viewModel.isLoading {
                 ProgressView()
@@ -44,12 +59,6 @@ struct ContentView: View {
                             // To previous page (Locations)
                         } label: {
                             Image(systemName: "<")
-                        }
-                        
-                        Button {
-                            // To the next page (CreateNewPost)
-                        } label: {
-                            Text("Next")
                         }
                     }
                 }
@@ -74,11 +83,12 @@ struct ContentView: View {
 //                }
             }
         }
+        .navigationTitle("Adding Music")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ResultView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ResultView(newItemPresented: .constant(true))
+//    }
+//}

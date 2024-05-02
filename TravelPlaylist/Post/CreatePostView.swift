@@ -10,38 +10,55 @@ import SwiftUI
 struct CreatePostView: View {
     @ObservedObject var viewModel = CreatePostViewModel()
     @Binding var newItemPresented: Bool
+    // @State private var showingAddingMusic = false
     
     var body: some View {
-        VStack {
-            Text("Create Post")
-                .font(.system(size: 32))
-                .bold()
-                .padding(.top, 50)
-            
-            Form {
-                ScrollView {
-                    TextField("What’s happening?", text: $viewModel.content)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                }
-                .padding()
-                .border(Color.gray, width: 1)
+        NavigationView {
+            VStack {
+//                Text("Create Post")
+//                    .font(.system(size: 32))
+//                    .bold()
+//                    .padding(.top, 50)
                 
-                Button("Post") {
-                    if viewModel.canPost {
-                        viewModel.post()
-                        newItemPresented = false
-                    } else {
-                        viewModel.showAlert = true
+                Form {
+                    ScrollView {
+                        TextField("What’s happening?", text: $viewModel.content)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        
+                        // ResultView(newItemPresented: $viewModel.showingAddingMusic)
                     }
+                    .padding()
+                    .border(Color.gray, width: 1)
+                    
+                    NavigationLink("Add Music", destination: ResultView())
+                    
+                    TLButton(title: "Post", background: .blue) {
+                        if viewModel.canPost {
+                            viewModel.post()
+                            newItemPresented = false
+                        } else {
+                            viewModel.showAlert = true
+                        }
+                    }
+                    .padding()
+    //                Button("Post") {
+    //                    if viewModel.canPost {
+    //                        viewModel.post()
+    //                        newItemPresented = false
+    //                    } else {
+    //                        viewModel.showAlert = true
+    //                    }
+    //                }
+    //                .padding()
                 }
-                .padding()
+                .alert(isPresented: $viewModel.showAlert) {
+                    Alert(
+                        title: Text("Error"),
+                        message: Text("Please fill in all fields.")
+                    )
+                }
             }
-            .alert(isPresented: $viewModel.showAlert) {
-                Alert(
-                    title: Text("Error"),
-                    message: Text("Please fill in all fields.")
-                )
-            }
+            .navigationTitle("Create Post")
         }
     }
 }

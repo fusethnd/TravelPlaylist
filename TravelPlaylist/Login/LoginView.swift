@@ -27,7 +27,7 @@ struct LoginView: View {
                         viewModel.login()
                     }
                     
-                    TLButton(title: "Log In via Spotify", background: .green) {
+//                    TLButton(title: "Log In via Spotify", background: .green) {
                         // be back to add this function later
 //                         spotifyModel.authenticate()
 //                        viewModel.spotifyLogin()
@@ -38,7 +38,7 @@ struct LoginView: View {
 //                        }
                         
                         // When the user taps the button, the app should open a web view or Safari to show the Spotify authorization page.
-                    }
+//                    }
                 }
                 
                 VStack {
