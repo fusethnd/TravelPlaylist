@@ -1,68 +1,63 @@
 //
-//  MapView.swift
-//  TravelPlaylist
+//  MapsView.swift
+//  MapView
 //
-//  Created by Thanapat on 23/4/2567 BE.
+//  Created by Thanadon Boontawee on 2/5/2567 BE.
 //
 
 import SwiftUI
 import MapKit
-import CoreLocation
 
-struct MapsView: View {
-    
-    @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
-    
-    var body: some View {
-        Map(position: $position) {
-            UserAnnotation()
-        }
-        .mapControls{
-            MapUserLocationButton()
-            MapPitchToggle()
-        }
-        .onAppear {
-            CLLocationManager().requestWhenInUseAuthorization()
-        }
+class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
+    private var locationManager = CLLocationManager()
+    @Published var userCoordinate: CLLocationCoordinate2D?
+
+    override init() {
+        super.init()
+        self.locationManager.delegate = self
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startUpdatingLocation()
     }
-    
-//    @StateObject private var viewModel = MapsViewModel()
-//    
-//    var body: some View {
-//        Map(coordinateRegion: $viewModel.region, interactionModes: .all, showsUserLocation: true, userTrackingMode: .none, annotationItems: viewModel.annotations) { annotation in
-//            MapMarker(coordinate: annotation.coordinate, tint: .red)
-//        }
-//        .edgesIgnoringSafeArea(.all)
-//        .onAppear {
-//            // Call the method to add existing points here
-//            addExistingPoints()
-//        }
-//    }
-//    
-//    // Add current location
-//    private func addExistingPoints() {
-//        // Check if location services are enabled
-//        guard CLLocationManager.locationServicesEnabled() else {
-//            print("Location services are not enabled.")
-//            return
-//        }
-//        
-//        // Request authorization for location services
-//        let locationManager = CLLocationManager()
-//        locationManager.requestWhenInUseAuthorization()
-//        
-//        // Get the user's current location
-//        if let userLocation = locationManager.location {
-//            viewModel.addAnnotation(coordinate: userLocation.coordinate, title: "Current Location")
-//        } else {
-//            print("Unable to get the user's current location.")
-//        }
-//    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        userCoordinate = location.coordinate
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Failed to find user's location: \(error.localizedDescription)")
+    }
 }
 
-struct MapsView_Previews: PreviewProvider {
+struct MapsView: View {
+    @StateObject private var locationManager = LocationManager()
+
+    var body: some View {
+        VStack {
+            Map(
+                coordinateRegion: .constant(
+                    MKCoordinateRegion(
+                        center: locationManager.userCoordinate ?? CLLocationCoordinate2D(latitude: 48.856788, longitude: 2.351077),
+                        span: MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
+                    )
+                ),
+                showsUserLocation: true
+            )
+            .frame(height: 300)
+            
+            if let userCoordinate = locationManager.userCoordinate {
+                Text("Latitude: \(userCoordinate.latitude)")
+                Text("Longitude: \(userCoordinate.longitude)")
+            } else {
+                Text("Latitude: -")
+                Text("Longitude: -")
+            }
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MapsView()
     }
 }
-
