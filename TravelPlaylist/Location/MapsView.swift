@@ -31,7 +31,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
 
 struct MapsView: View {
     @StateObject private var locationManager = LocationManager()
-
+    
     var body: some View {
         VStack {
             Map(
@@ -54,10 +54,3 @@ struct MapsView: View {
             }
         }
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        MapsView()
-    }
-}

@@ -8,6 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		A925A65D2BD470DF0057434E /* SpotifyiOS in Frameworks */ = {isa = PBXBuildFile; productRef = A925A65C2BD470DF0057434E /* SpotifyiOS */; };
+		A945AAA82BE3C2B000FE767E /* TrackItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA22BE3C2AF00FE767E /* TrackItemViewModel.swift */; };
+		A945AAA92BE3C2B000FE767E /* TrackItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA22BE3C2AF00FE767E /* TrackItemViewModel.swift */; };
+		A945AAAA2BE3C2B000FE767E /* TrackItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA22BE3C2AF00FE767E /* TrackItemViewModel.swift */; };
+		A945AAAB2BE3C2B000FE767E /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA32BE3C2AF00FE767E /* TrackViewModel.swift */; };
+		A945AAAC2BE3C2B000FE767E /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA32BE3C2AF00FE767E /* TrackViewModel.swift */; };
+		A945AAAD2BE3C2B000FE767E /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA32BE3C2AF00FE767E /* TrackViewModel.swift */; };
+		A945AAAE2BE3C2B000FE767E /* ResultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA42BE3C2AF00FE767E /* ResultManager.swift */; };
+		A945AAAF2BE3C2B000FE767E /* ResultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA42BE3C2AF00FE767E /* ResultManager.swift */; };
+		A945AAB02BE3C2B000FE767E /* ResultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA42BE3C2AF00FE767E /* ResultManager.swift */; };
+		A945AAB12BE3C2B000FE767E /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA52BE3C2AF00FE767E /* ResultViewModel.swift */; };
+		A945AAB22BE3C2B000FE767E /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA52BE3C2AF00FE767E /* ResultViewModel.swift */; };
+		A945AAB32BE3C2B000FE767E /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA52BE3C2AF00FE767E /* ResultViewModel.swift */; };
+		A945AAB42BE3C2B000FE767E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA62BE3C2AF00FE767E /* ContentView.swift */; };
+		A945AAB52BE3C2B000FE767E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA62BE3C2AF00FE767E /* ContentView.swift */; };
+		A945AAB62BE3C2B000FE767E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA62BE3C2AF00FE767E /* ContentView.swift */; };
+		A945AAB72BE3C2B000FE767E /* TrackItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA72BE3C2AF00FE767E /* TrackItemView.swift */; };
+		A945AAB82BE3C2B000FE767E /* TrackItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA72BE3C2AF00FE767E /* TrackItemView.swift */; };
+		A945AAB92BE3C2B000FE767E /* TrackItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945AAA72BE3C2AF00FE767E /* TrackItemView.swift */; };
 		A947BCFE2BD8F933000D162C /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BCFD2BD8F932000D162C /* MapsView.swift */; };
 		A947BCFF2BD8F933000D162C /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BCFD2BD8F932000D162C /* MapsView.swift */; };
 		A947BD002BD8F933000D162C /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A947BCFD2BD8F932000D162C /* MapsView.swift */; };
@@ -108,6 +126,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A945AAA22BE3C2AF00FE767E /* TrackItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackItemViewModel.swift; path = ../../../Temp/SpotifySearch/SpotifySearch/TrackItemViewModel.swift; sourceTree = "<group>"; };
+		A945AAA32BE3C2AF00FE767E /* TrackViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackViewModel.swift; path = ../../../Temp/SpotifySearch/SpotifySearch/TrackViewModel.swift; sourceTree = "<group>"; };
+		A945AAA42BE3C2AF00FE767E /* ResultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultManager.swift; path = ../../../Temp/SpotifySearch/SpotifySearch/ResultManager.swift; sourceTree = "<group>"; };
+		A945AAA52BE3C2AF00FE767E /* ResultViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultViewModel.swift; path = ../../../Temp/SpotifySearch/SpotifySearch/ResultViewModel.swift; sourceTree = "<group>"; };
+		A945AAA62BE3C2AF00FE767E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A945AAA72BE3C2AF00FE767E /* TrackItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackItemView.swift; path = ../../../Temp/SpotifySearch/SpotifySearch/TrackItemView.swift; sourceTree = "<group>"; };
 		A947BCFD2BD8F932000D162C /* MapsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
 		A947BD012BD8F93F000D162C /* MapsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsViewModel.swift; path = TravelPlaylist/Location/MapsViewModel.swift; sourceTree = SOURCE_ROOT; };
 		A947BD0E2BD924A2000D162C /* JoerneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoerneyView.swift; sourceTree = "<group>"; };
@@ -307,6 +331,12 @@
 		A9F1A3C72BE10E95009AE413 /* Track */ = {
 			isa = PBXGroup;
 			children = (
+				A945AAA62BE3C2AF00FE767E /* ContentView.swift */,
+				A945AAA42BE3C2AF00FE767E /* ResultManager.swift */,
+				A945AAA52BE3C2AF00FE767E /* ResultViewModel.swift */,
+				A945AAA72BE3C2AF00FE767E /* TrackItemView.swift */,
+				A945AAA22BE3C2AF00FE767E /* TrackItemViewModel.swift */,
+				A945AAA32BE3C2AF00FE767E /* TrackViewModel.swift */,
 			);
 			path = Track;
 			sourceTree = "<group>";
@@ -529,15 +559,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A945AAAB2BE3C2B000FE767E /* TrackViewModel.swift in Sources */,
+				A945AAB12BE3C2B000FE767E /* ResultViewModel.swift in Sources */,
 				A947BD0F2BD924A2000D162C /* JoerneyView.swift in Sources */,
 				A947BD1B2BD93318000D162C /* PostItemViewModel.swift in Sources */,
+				A945AAAE2BE3C2B000FE767E /* ResultManager.swift in Sources */,
 				A947BD132BD924B2000D162C /* JoerneyViewModel.swift in Sources */,
 				A97117F12BC68A4C0095C256 /* RegisterView.swift in Sources */,
 				A971182E2BC68EAA0095C256 /* TLButton.swift in Sources */,
 				A97117E32BC688DD0095C256 /* User.swift in Sources */,
 				A97117B02BBFC65E0095C256 /* MainView.swift in Sources */,
 				A97117E92BC689930095C256 /* RegisterViewModel.swift in Sources */,
+				A945AAB42BE3C2B000FE767E /* ContentView.swift in Sources */,
 				A947BCFE2BD8F933000D162C /* MapsView.swift in Sources */,
+				A945AAB72BE3C2B000FE767E /* TrackItemView.swift in Sources */,
 				A97117F32BC68A7C0095C256 /* ProfileView.swift in Sources */,
 				A9F1A3C32BE0D2A9009AE413 /* FeedView.swift in Sources */,
 				A947BD232BD9335B000D162C /* CreatePostView.swift in Sources */,
@@ -555,6 +590,7 @@
 				A97117ED2BC689C50095C256 /* MainViewModel.swift in Sources */,
 				A971182C2BC68E640095C256 /* HeaderView.swift in Sources */,
 				A947BD172BD93300000D162C /* CreatePostViewModel.swift in Sources */,
+				A945AAA82BE3C2B000FE767E /* TrackItemViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,8 +599,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9F1A3CD2BE1115D009AE413 /* PostItem.swift in Sources */,
+				A945AAB22BE3C2B000FE767E /* ResultViewModel.swift in Sources */,
+				A945AAB52BE3C2B000FE767E /* ContentView.swift in Sources */,
 				A97117BF2BBFC6600095C256 /* TravelPlaylistTests.swift in Sources */,
+				A945AAAC2BE3C2B000FE767E /* TrackViewModel.swift in Sources */,
+				A945AAB82BE3C2B000FE767E /* TrackItemView.swift in Sources */,
 				A947BD202BD93341000D162C /* PostContentViewModel.swift in Sources */,
+				A945AAAF2BE3C2B000FE767E /* ResultManager.swift in Sources */,
 				A947BD2C2BD9337C000D162C /* PostContentView.swift in Sources */,
 				A947BD1C2BD93318000D162C /* PostItemViewModel.swift in Sources */,
 				A947BD142BD924B2000D162C /* JoerneyViewModel.swift in Sources */,
@@ -573,6 +614,7 @@
 				A947BD102BD924A2000D162C /* JoerneyView.swift in Sources */,
 				A947BD282BD9336E000D162C /* PostItemView.swift in Sources */,
 				A947BCFF2BD8F933000D162C /* MapsView.swift in Sources */,
+				A945AAA92BE3C2B000FE767E /* TrackItemViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,18 +622,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A945AAAD2BE3C2B000FE767E /* TrackViewModel.swift in Sources */,
 				A947BD1D2BD93318000D162C /* PostItemViewModel.swift in Sources */,
 				A947BD292BD9336E000D162C /* PostItemView.swift in Sources */,
 				A947BD2D2BD9337C000D162C /* PostContentView.swift in Sources */,
 				A97117CB2BBFC6610095C256 /* TravelPlaylistUITestsLaunchTests.swift in Sources */,
 				A947BD152BD924B2000D162C /* JoerneyViewModel.swift in Sources */,
 				A947BD192BD93300000D162C /* CreatePostViewModel.swift in Sources */,
+				A945AAB62BE3C2B000FE767E /* ContentView.swift in Sources */,
 				A9F1A3CE2BE1115D009AE413 /* PostItem.swift in Sources */,
 				A947BD212BD93341000D162C /* PostContentViewModel.swift in Sources */,
 				A947BD252BD9335B000D162C /* CreatePostView.swift in Sources */,
+				A945AAB92BE3C2B000FE767E /* TrackItemView.swift in Sources */,
 				A947BD002BD8F933000D162C /* MapsView.swift in Sources */,
+				A945AAB32BE3C2B000FE767E /* ResultViewModel.swift in Sources */,
 				A97117C92BBFC6610095C256 /* TravelPlaylistUITests.swift in Sources */,
+				A945AAAA2BE3C2B000FE767E /* TrackItemViewModel.swift in Sources */,
 				A947BD112BD924A2000D162C /* JoerneyView.swift in Sources */,
+				A945AAB02BE3C2B000FE767E /* ResultManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,7 +790,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TravelPlaylist/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Show the user location.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "show user location.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -773,7 +821,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TravelPlaylist/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Show the user location.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "show user location.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
