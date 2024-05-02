@@ -54,6 +54,7 @@ struct PostItemView: View {
                 
             }
         }
+        
     }
 }
 

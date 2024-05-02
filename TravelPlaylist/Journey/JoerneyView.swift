@@ -10,6 +10,7 @@ import FirebaseFirestoreSwift
 
 struct JourneyView: View {
     @StateObject var joerneyViewModel: JoerneyViewModel
+    @StateObject var postItemViewModel = PostItemViewModel()
     
     init(userId: String) {
         self._joerneyViewModel = StateObject(wrappedValue: JoerneyViewModel(userId: userId))
@@ -28,6 +29,12 @@ struct JourneyView: View {
                     .cornerRadius(10) // Add corner radius to the background
                     .padding(.horizontal) // Add horizontal padding to the background
                 }
+                Button {
+                    postItemViewModel.delete(item: post)
+                } label: {
+                    Image(systemName: "trash.fill")
+                }
+                .tint(.red)
             }
             .navigationBarTitle("Journey")
         }

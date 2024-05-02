@@ -34,10 +34,14 @@ struct CreatePostView: View {
                     
                     NavigationLink("Add Music", destination: ResultView())
                     
-                    Map(position: $position) {}
-                        .onAppear{
-                            CLLocationManager().requestWhenInUseAuthorization()
-                        }
+                    HStack {
+                        Map(position: $position) {}
+                            .onAppear{
+                                CLLocationManager().requestWhenInUseAuthorization()
+                            }
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: 300)
+                    
                     
 //                    MapsView(latitude: item.latitude,longitude: item.longitude)
 //                        .padding()

@@ -22,8 +22,22 @@ class PostItemViewModel: ObservableObject {
         let db = Firestore.firestore()
         db.collection("users")
             .document(uid)
-            .collection("posts")
+            .collection("journey")
             .document(itemCopy.id)
             .setData(itemCopy.asDictionary())
+    }
+    
+    func delete(item: PostItem) {
+        let itemCopy = item
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+        }
+
+        let db = Firestore.firestore()
+        db.collection("users")
+            .document(uid)
+            .collection("journey")
+            .document(itemCopy.id)
+            .delete()
     }
 }
