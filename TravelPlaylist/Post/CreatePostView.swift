@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct CreatePostView: View {
     @ObservedObject var viewModel = CreatePostViewModel()
     @Binding var newItemPresented: Bool
+    @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
     // @State private var showingAddingMusic = false
     
     var body: some View {
@@ -31,6 +33,18 @@ struct CreatePostView: View {
                     .border(Color.gray, width: 1)
                     
                     NavigationLink("Add Music", destination: ResultView())
+                    
+                    Map(position: $position) {}
+                        .onAppear{
+                            CLLocationManager().requestWhenInUseAuthorization()
+                        }
+                    
+//                    MapsView(latitude: item.latitude,longitude: item.longitude)
+//                        .padding()
+//                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+//                        .background(Color.blue.opacity(0.3))
+//                        .cornerRadius(10)
+//                        .padding()
                     
                     TLButton(title: "Post", background: .blue) {
                         if viewModel.canPost {

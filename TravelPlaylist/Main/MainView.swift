@@ -35,10 +35,6 @@ struct MainView: View {
                 .tabItem {
                     Label("Profile", systemImage: "person.circle")
                 }
-            MapsView()
-                .tabItem {
-                    Label("MapsView", systemImage: "map.fill")
-                }
         }
     }
     

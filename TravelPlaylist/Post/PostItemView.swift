@@ -40,12 +40,18 @@ struct PostItemView: View {
                     .font(.footnote)
                     .foregroundColor(Color(.secondaryLabel))
                 
-                MapsView()
+                MapsView(latitude: item.latitude,longitude: item.longitude)
                     .padding()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.blue.opacity(0.3))
                     .cornerRadius(10)
                     .padding()
+                
+                Text("latitude: \(item.latitude)")
+                    .font(.body)
+                Text("longitude: \(item.longitude)")
+                    .font(.body)
+                
             }
         }
     }
