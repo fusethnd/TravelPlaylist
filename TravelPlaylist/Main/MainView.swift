@@ -26,7 +26,7 @@ struct MainView: View {
                     Label("Feed", systemImage: "note.text")
                 }
             
-            JoerneyView(userId: viewModel.currentUserId)
+            JourneyView(userId: viewModel.currentUserId)
                 .tabItem {
                     Label("My Journey", systemImage: "house")
                 }

@@ -13,7 +13,7 @@ struct PostItemView: View {
     
     var body: some View {
         HStack {
-            VStack(alignment: .leading) {
+            VStack(alignment: .center) {
                 HStack {
                     Text(item.authorName)
                         .font(.headline)
@@ -23,6 +23,7 @@ struct PostItemView: View {
                 
                 Text(item.content)
                     .font(.body)
+                
                 
                 Text("Song") // item.track
                     .font(.title)
@@ -38,6 +39,13 @@ struct PostItemView: View {
                 Text("\(Date(timeIntervalSince1970: item.createDate).formatted(date: .abbreviated, time: .shortened))")
                     .font(.footnote)
                     .foregroundColor(Color(.secondaryLabel))
+                
+                MapsView()
+                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.blue.opacity(0.3))
+                    .cornerRadius(10)
+                    .padding()
             }
         }
     }

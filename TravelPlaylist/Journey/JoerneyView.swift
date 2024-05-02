@@ -8,7 +8,7 @@
 import SwiftUI
 import FirebaseFirestoreSwift
 
-struct JoerneyView: View {
+struct JourneyView: View {
     @StateObject var joerneyViewModel: JoerneyViewModel
     
     init(userId: String) {
@@ -17,16 +17,47 @@ struct JoerneyView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                List(joerneyViewModel.posts) { post in
-                    PostItemView(item: post)
+            List(joerneyViewModel.posts) { post in
+                NavigationLink(destination: PostItemView(item: post)) {
+                    VStack(alignment: .leading) {
+                        Text("Author: \(post.authorName) (\(post.author))")
+                        Text("Content: \(post.content)")
+                    }
+                    .padding()
+                    .background(Color.gray.opacity(0.1)) // Add background to each post
+                    .cornerRadius(10) // Add corner radius to the background
+                    .padding(.horizontal) // Add horizontal padding to the background
                 }
-                .navigationTitle("My Journey")
             }
             .navigationBarTitle("Journey")
         }
     }
 }
+
+
+//struct JoerneyView: View {
+//    @StateObject var joerneyViewModel: JoerneyViewModel
+//    
+//    init(userId: String) {
+//        self._joerneyViewModel = StateObject(wrappedValue: JoerneyViewModel(userId: userId))
+//    }
+//    
+//    var body: some View {
+//        NavigationView {
+//            VStack {
+//                List(joerneyViewModel.posts) { post in
+//                    PostItemView(item: post)
+//                }
+//                .padding()
+//                .background(Color.gray.opacity(0.1)) // Add background to each post
+//                .cornerRadius(10) // Add corner radius to the background
+//                .padding(.horizontal) // Add horizontal padding to the background
+//                .navigationTitle("My Journey")
+//            }
+//            .navigationBarTitle("Journey")
+//        }
+//    }
+//}
 
 
 //struct JoeyneyView_Previews: PreviewProvider {
