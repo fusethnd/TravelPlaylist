@@ -21,7 +21,7 @@ struct MainView: View {
     var accountView: some View {
         TabView { // Navigation
             // Feed page
-            FeedView()
+            FeedView(viewModel: FeedViewModel())
                 .tabItem {
                     Label("Feed", systemImage: "note.text")
                 }

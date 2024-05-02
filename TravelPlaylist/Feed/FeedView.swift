@@ -5,48 +5,47 @@
 //  Created by Thanadon Boontawee on 30/4/2567 BE.
 //
 
-import Foundation
 import SwiftUI
 
 struct FeedView: View {
-    @ObservedObject var viewModel = FeedViewModel() // userId: <#String#>)
-    // PostItemViewModel()
-    @State private var showingCreatePost = false
+    @ObservedObject var viewModel: FeedViewModel
+    
+    init(viewModel: FeedViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
-        // Text("Hello, World")
         NavigationView {
-            // PostButton
-            List(viewModel.feed) { item in
-                  PostItemView(item: item)
+            List(viewModel.feed) { post in
+                NavigationLink(destination: PostItemView(item: post)) {
+                    VStack(alignment: .leading) {
+                        Text("Author: \(post.authorName) (\(post.author))")
+                        Text("Content: \(post.content)")
+                    }
+                    .padding()
+                    .background(Color.gray.opacity(0.1)) // Add background to each post
+                    .cornerRadius(10) // Add corner radius to the background
+                    .padding(.horizontal) // Add horizontal padding to the background
+                }
             }
             .navigationBarTitle("Feed")
             .navigationBarItems(trailing: Button(action: {
-                showingCreatePost = true
+                viewModel.showingCreatePostView = true
             }) {
-                Image(systemName: "plus.circle.fill") // Stylish way to represent "add new post"
+                Image(systemName: "plus.circle.fill")
                     .resizable()
                     .frame(width: 30, height: 30)
-                })
-            .sheet(isPresented: $showingCreatePost) {
-                CreatePostView(newItemPresented: $viewModel.showingCreatePostView) // Ensure CreateTweetView can handle its own environment and view model
+            })
+            .sheet(isPresented: $viewModel.showingCreatePostView) {
+                CreatePostView(newItemPresented: $viewModel.showingCreatePostView)
             }
             .onAppear {
                 viewModel.fetchPostItem()
             }
-//            .toolbar {
-//                Button {
-//                    viewModel.showingCreatePostView = true
-//                } label: {
-//                    Image(systemName: "plus")
-//                }
-//            }
-//            .sheet(isPresented: $viewModel.showingCreatePostView) {
-//                CreatePostView(newItemPresented: $viewModel.showingCreatePostView)
-//            }
         }
     }
 }
+
 
 //struct FeedView_Previews: PreviewProvider {
 //    static var previews: some View {
