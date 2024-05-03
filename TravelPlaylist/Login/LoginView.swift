@@ -13,41 +13,58 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             VStack {
-                HeaderView(title: "TravelPlaylist", subtitle: "Make your playlist on the way", angle: 15, background: .pink)
-                
-                Form {
-                    TextField("Email Address", text: $viewModel.email)
-                        .textFieldStyle(DefaultTextFieldStyle())
+                VStack(spacing: 10) {
+                    Text("Travel Music")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                    Text("Find music on your ways")
+                        .font(.title3)
+                        .foregroundColor(.gray)
+                }
+                .padding(.top, 70)
+
+                VStack {
+                    TextField("Name", text: $viewModel.email)
+                        .padding()
+                        .background(Color.white.opacity(0.7))
+                        .cornerRadius(20)
+                        .padding(.horizontal, 40)
                         .autocorrectionDisabled()
                         .autocapitalization(.none)
                     SecureField("Password", text: $viewModel.password)
-                        .textFieldStyle(DefaultTextFieldStyle())
-                    
-                    TLButton(title: "Log In", background: .blue) {
+                        .padding()
+                        .background(Color.white.opacity(0.7))
+                        .cornerRadius(20)
+                        .padding(.horizontal, 40)
+
+                    Button(action: {
                         viewModel.login()
+                    }) {
+                        Text("Log in")
+                            .fontWeight(.semibold)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.pink)
+                            .cornerRadius(20)
+                            .padding(.horizontal, 40)
                     }
-                    
-//                    TLButton(title: "Log In via Spotify", background: .green) {
-                        // be back to add this function later
-//                         spotifyModel.authenticate()
-//                        viewModel.spotifyLogin()
-//                        viewModel.completionHandler = { [weak self] success in
-//                            DispatchQueue.main.async {
-//                                self?.handleSignIn(success: success)
-//                            }
-//                        }
-                        
-                        // When the user taps the button, the app should open a web view or Safari to show the Spotify authorization page.
-//                    }
                 }
-                
+                .padding(.top, 40)
+
                 VStack {
                     Text("Don't have an Account?")
                     NavigationLink("Create an Account", destination: RegisterView())
+                        .foregroundColor(Color.blue)
                 }
-                
+                .padding(.top, 20)
             }
+            .background(Color(hex: "E1F16B"))
+            .edgesIgnoringSafeArea(.all)
         }
+        .foregroundColor(Color(hex: "272727"))
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 

@@ -14,6 +14,7 @@ class RegisterViewModel: ObservableObject {
     @Published var username = ""
     @Published var email = ""
     @Published var password = ""
+    @Published var confirmPassword = ""
     
     func register() {
         guard validate() else {
@@ -46,6 +47,9 @@ class RegisterViewModel: ObservableObject {
             return false
         }
         guard password.count >= 6 else {
+            return false
+        }
+        guard password == confirmPassword else {
             return false
         }
         return true
