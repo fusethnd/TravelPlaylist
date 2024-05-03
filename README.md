@@ -1,6 +1,8 @@
 <a name="readme-top"></a>
 > Thanadon Boontawee - 6410685165
-> Thanapat Sarathum - 64XXXXXX
+
+> Thanapat Sarathum - 6410685140
+> 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -8,13 +10,13 @@
     <img src="img/TravelPlaylist.png" alt="Logo" width="80" height="80" style="border-radius: 20px;">
   </a>
 
-<h3 align="center">TracelPlaylist</h3>
+<h3 align="center">TravelPlaylist</h3>
 
   <p align="center">
     Travel Playlist - Social Network Application to share xxxxxx
     <br>
     <br />
-    <a href="https://www.youtube.com/watch?v=h8lP0gXaQ1c">📲 Demo Video </a>
+    <a>📲 Demo Video </a>
     ·
     <a href="https://github.com/fusethnd/TravelPlaylist">📥 Repository </a>
     ·
@@ -138,7 +140,7 @@ To run the project locally, follow these steps:
 <!-- CONTACT -->
 ## Contact
 Thanadon Boontawee - [@fusethnd](https://github.com/fusethnd) - [fusethnd\@gmail.com](mailto:fusethnd@gmail.com?subject=Test)
-Thanapat Sarathum - [@fusethnd](https://github.com/fusethnd) - [fusethnd\@gmail.com](mailto:fusethnd@gmail.com?subject=Test)
+Thanapat Sarathum - [@6410685140](https://github.com/6410685140) - [thanapat.sar.tu\@gmail.com](mailto:thanapat.sar.tu@gmail.com?subject=Test)
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><br>
 
